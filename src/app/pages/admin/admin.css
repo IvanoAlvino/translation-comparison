@@ -1,0 +1,38 @@
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.filebtn {
+  display: inline-block;
+  margin: 0;
+  font-weight: 600;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 11px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.filebtn input {
+  display: none;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.error {
+  color: #b42318;
+  font-weight: 600;
+  margin: 8px 0 0;
+}
+
+.footnote {
+  font-size: 12px;
+  margin: 8px 0 0;
+}

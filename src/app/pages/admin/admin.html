@@ -1,0 +1,108 @@
+<div class="page">
+  <div class="card">
+    <h1>Admin · results aggregator</h1>
+    <p class="lead">
+      Upload one or more participant result files. Everything is processed locally in your browser
+      — nothing is uploaded anywhere.
+    </p>
+
+    <div class="controls">
+      <label class="filebtn">
+        Select result files…
+        <input type="file" accept="application/json,.json" multiple (change)="onFiles($event)" />
+      </label>
+      @if (runCount()) {
+        <button class="ghost" (click)="clear()">Clear ({{ runCount() }})</button>
+      }
+    </div>
+
+    @for (e of errors(); track e) {
+      <p class="error">{{ e }}</p>
+    }
+  </div>
+
+  @if (runCount()) {
+    <div class="card section">
+      <h2>Overall — {{ runCount() }} run(s)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Comparisons</th>
+            <th>AI preferred</th>
+            <th>Agency preferred</th>
+            <th>Both good</th>
+            <th>AI win rate*</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ overall().total }}</td>
+            <td>{{ overall().ai }}</td>
+            <td>{{ overall().agency }}</td>
+            <td>{{ overall().tie }}</td>
+            <td><strong>{{ aiWinRate(overall()) }}</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="footnote muted">
+        * AI win rate is (AI + Both good) ÷ all comparisons — a tie counts as an AI win.
+      </p>
+    </div>
+
+    <div class="card section">
+      <h2>By language</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Language</th>
+            <th>Comparisons</th>
+            <th>AI</th>
+            <th>Agency</th>
+            <th>Both good</th>
+            <th>AI win rate*</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of byLanguage(); track row.key) {
+            <tr>
+              <td>{{ row.key }}</td>
+              <td>{{ row.total }}</td>
+              <td>{{ row.ai }}</td>
+              <td>{{ row.agency }}</td>
+              <td>{{ row.tie }}</td>
+              <td><strong>{{ aiWinRate(row) }}</strong></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card section">
+      <h2>By participant</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Participant</th>
+            <th>Comparisons</th>
+            <th>AI</th>
+            <th>Agency</th>
+            <th>Both good</th>
+            <th>AI win rate*</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of byParticipant(); track row.key) {
+            <tr>
+              <td>{{ row.key }}</td>
+              <td>{{ row.total }}</td>
+              <td>{{ row.ai }}</td>
+              <td>{{ row.agency }}</td>
+              <td>{{ row.tie }}</td>
+              <td><strong>{{ aiWinRate(row) }}</strong></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

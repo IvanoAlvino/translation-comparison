@@ -1,0 +1,16 @@
+.note {
+  margin-top: 20px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.ok {
+  color: #027a48;
+  font-weight: 600;
+  margin-top: 16px;
+}

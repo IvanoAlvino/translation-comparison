@@ -1,0 +1,24 @@
+<div class="page">
+  @if (result(); as r) {
+    <div class="card">
+      <h1>Thank you, {{ r.participant }}!</h1>
+      <p class="lead">
+        You completed all {{ r.summary.total }} comparisons in {{ r.languageName }}.
+      </p>
+
+      <p class="note muted">
+        Please download your results and send the file to the organizer. Your individual choices
+        stay anonymous in the combined analysis.
+      </p>
+
+      <div class="actions">
+        <button class="primary" (click)="download()">Download results</button>
+        <button class="ghost" (click)="restart()">Do another language</button>
+      </div>
+
+      @if (downloaded()) {
+        <p class="ok">Downloaded. Thanks — please send the file over.</p>
+      }
+    </div>
+  }
+</div>

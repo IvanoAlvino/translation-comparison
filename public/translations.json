@@ -1,0 +1,1096 @@
+{
+  "languages": [
+    {
+      "code": "es",
+      "name": "Spanish",
+      "items": [
+        {
+          "id": "es-001",
+          "source": "GS Ready",
+          "agency": "GS listo",
+          "ai": "Listo para GS"
+        },
+        {
+          "id": "es-002",
+          "source": "Cropping box",
+          "agency": "Cuadro de recorte",
+          "ai": "Caja de recorte"
+        },
+        {
+          "id": "es-003",
+          "source": "Capture Locations",
+          "agency": "Capturar ubicaciones",
+          "ai": "Ubicaciones de captura"
+        },
+        {
+          "id": "es-004",
+          "source": "Clear highlight",
+          "agency": "Borrar realce",
+          "ai": "Borrar resaltado"
+        },
+        {
+          "id": "es-005",
+          "source": "Task Name",
+          "agency": "Nombre de la tarea",
+          "ai": "Nombre de tarea"
+        },
+        {
+          "id": "es-006",
+          "source": "Hidden datasets in cluster",
+          "agency": "Conjuntos de datos ocultos en clúster",
+          "ai": "Conjuntos de datos ocultos en el clúster"
+        },
+        {
+          "id": "es-007",
+          "source": "Point Cloud Resolution (mm)",
+          "agency": "Resolución de la nube de puntos (mm)",
+          "ai": "Resolución de nube de puntos (mm)"
+        },
+        {
+          "id": "es-008",
+          "source": "Cross Dataset Aligned",
+          "agency": "Conjuntos de datos cruzados alineados",
+          "ai": "Alineado entre conjuntos de datos"
+        },
+        {
+          "id": "es-009",
+          "source": "Unable to cancel dataset task",
+          "agency": "No se puede cancelar la tarea del conjunto de datos.",
+          "ai": "No se puede cancelar la tarea del conjunto de datos"
+        },
+        {
+          "id": "es-010",
+          "source": "The following datasets could not be cancelled",
+          "agency": "No se han podido cancelar los siguientes conjuntos de datos",
+          "ai": "No se pudieron cancelar los siguientes conjuntos de datos"
+        },
+        {
+          "id": "es-011",
+          "source": "Several lines ({linesWithError}, ...) cannot be read. ",
+          "agency": "Varias líneas ({linesWithError}, ...) no se pueden leer. ",
+          "ai": "Varias líneas ({linesWithError}, ...) no se pueden leer."
+        },
+        {
+          "id": "es-012",
+          "source": "Version {required} or higher is required to enable Cross-dataset alignment.",
+          "agency": "Se requiere la versión {required} o posterior para habilitar la alineación de conjuntos de datos cruzados.",
+          "ai": "Se requiere la versión {required} o superior para habilitar la alineación entre conjuntos de datos."
+        },
+        {
+          "id": "es-013",
+          "source": "The dataset {datasetName} could not be stopped.",
+          "agency": "No se ha podido detener el conjunto de datos {datasetName}.",
+          "ai": "No se pudo detener el conjunto de datos {datasetName}."
+        },
+        {
+          "id": "es-014",
+          "source": "Line {linesWithError} cannot be read. ",
+          "agency": "La línea {linesWithError} no se puede leer. ",
+          "ai": "La línea {linesWithError} no se puede leer."
+        },
+        {
+          "id": "es-015",
+          "source": "System software version {current} is outdated. Version {required} or higher is required to enable Cross-dataset alignment.",
+          "agency": "La versión {current} del software del sistema está desactualizada. Se requiere la versión {required} o posterior para habilitar la alineación de conjuntos de datos cruzados.",
+          "ai": "La versión del software del sistema {current} está desactualizada. Se requiere la versión {required} o superior para habilitar la alineación entre conjuntos de datos."
+        },
+        {
+          "id": "es-016",
+          "source": "Therefore, {count, plural, one {this dataset} other {these datasets}} cannot be deleted.",
+          "agency": "Por tanto, {count, plural, one {este conjunto de datos no se puede} other {estos conjuntos de datos no se pueden}} eliminar.",
+          "ai": "Por lo tanto, {count, plural, one {este conjunto de datos no se puede} other {estos conjuntos de datos no se pueden}} eliminar."
+        },
+        {
+          "id": "es-017",
+          "source": "{count, plural, one {# control point is} other {# control points are}} misaligned.",
+          "agency": "{count, plural, one {# punto de control está desalineado} other {# puntos de control están desalineados}}.",
+          "ai": "{count, plural, one {# punto de control está} other {# puntos de control están}} desalineado(s)."
+        },
+        {
+          "id": "es-018",
+          "source": "{count, plural, one {Dataset} other {Datasets}} in the processing task will be canceled and this cannot be undone.",
+          "agency": "Se cancelará(n) {count, plural, one {conjunto de datos} other {conjuntos de datos}} en la tarea de procesamiento y esto no se podrá deshacer.",
+          "ai": "{count, plural, one {El conjunto de datos} other {Los conjuntos de datos}} en la tarea de procesamiento se cancelará(n) y esto no se puede deshacer."
+        },
+        {
+          "id": "es-019",
+          "source": "{count} {count, plural, one {control point is} other {control points are}} misaligned. Don't use these points for processing if a mistake was made while measuring them. Or, if the control points are correct, processing should fix the problem.",
+          "agency": "{count} {count, plural, one {punto de control está desalineado} other {puntos de control están desalineados}}. No utilice estos puntos para el procesamiento si se cometió un error al medirlos. O, si los puntos de control son correctos, el procesamiento debería solucionar el problema.",
+          "ai": "{count} {count, plural, one {punto de control está} other {puntos de control están}} desalineado(s). No use estos puntos para el procesamiento si se cometió un error al medirlos. O, si los puntos de control son correctos, el procesamiento debería solucionar el problema."
+        },
+        {
+          "id": "es-020",
+          "source": "Automatically generates a realistic, high-detail 3D scene for datasets captured with GS mode",
+          "agency": "Genera automáticamente una escena realista muy detallada en 3D de los conjuntos de datos capturados con el modo GS.",
+          "ai": "Genera automáticamente una escena 3D realista de alto detalle para conjuntos de datos capturados con modo GS"
+        },
+        {
+          "id": "es-021",
+          "source": "It looks like the wrong unit may be being used for the control point measurements. It is also possible there was a tracking mistake in SLAM. Are you sure the surveyed control points were given in meters? The measured unit scale was: {measuredScale} m",
+          "agency": "Parece que se podría estar usando una unidad incorrecta en las mediciones de puntos de control. También es posible que haya un error de seguimiento en SLAM. ¿Seguro que los puntos de control topografiados se han dado en metros? La escala de unidades medidas ha sido: {measuredScale} m",
+          "ai": "Parece que se puede estar usando la unidad incorrecta para las mediciones de los puntos de control. También es posible que haya habido un error de seguimiento en SLAM. ¿Está seguro de que los puntos de control topografiados se dieron en metros? La escala de unidad medida fue: {measuredScale} m"
+        },
+        {
+          "id": "es-022",
+          "source": "Blurring Units Consumed",
+          "agency": "Unidades de desenfoque consumidas",
+          "ai": "Unidades de difuminado consumidas"
+        },
+        {
+          "id": "es-023",
+          "source": "At least two unique control points (with distinct IDs) are required for recording but you are only using 1. This dataset cannot be processed with control points since there are not enough control points to register it. You can still process the dataset without control points.",
+          "agency": "Se necesitan al menos dos puntos de control únicos (con identificadores disitnos) para la grabación, pero usted solo está utilizando uno. No se puede procesar este conjunto de datos con puntos de control porque no hay suficientes puntos de control para registrarlo. Sí puede procesar el conjunto de datos sin puntos de control.",
+          "ai": "Se requieren al menos dos puntos de control únicos (con ID distintos) para la grabación, pero solo está usando 1. Este conjunto de datos no se puede procesar con puntos de control ya que no hay suficientes puntos de control para registrarlo. Aún puede procesar el conjunto de datos sin puntos de control."
+        },
+        {
+          "id": "es-024",
+          "source": "The mean control point deviation decreased from {originMeanError} to {flippedMeanError} when flipping the x and y coordinates of the surveyed control points. This likely means the surveyed control points were given in a left handed coordinate system. However the control points must be given in a right handed coordinate system.",
+          "agency": "La desviación media del punto de control ha descendido de {originMeanError} a {flippedMeanError} al voltear las coordenadas x e y de los puntos de control topografiados. Esto significa probablemente que los puntos de control topografiados se dieron en un sistema de coordenadas levógiro. Sin embargo, los puntos de control deben darse en un sistema de coordenadas dextrógiro.",
+          "ai": "La desviación media del punto de control disminuyó de {originMeanError} a {flippedMeanError} al invertir las coordenadas x e y de los puntos de control topografiados. Esto probablemente significa que los puntos de control topografiados se proporcionaron en un sistema de coordenadas levógiro. Sin embargo, los puntos de control deben proporcionarse en un sistema de coordenadas dextrógiro."
+        },
+        {
+          "id": "es-025",
+          "source": "Cross-dataset alignment requires at least 2 datasets to be selected for processing.",
+          "agency": "La alineación de los conjuntos de datos cruzados requiere seleccionar al menos dos conjuntos de datos para el procesamiento.",
+          "ai": "La alineación entre conjuntos de datos requiere que se seleccionen al menos 2 conjuntos de datos para el procesamiento."
+        }
+      ]
+    },
+    {
+      "code": "fr",
+      "name": "French",
+      "items": [
+        {
+          "id": "fr-001",
+          "source": "Unload",
+          "agency": "Ne pas charger",
+          "ai": "Décharger"
+        },
+        {
+          "id": "fr-002",
+          "source": "GS Ready",
+          "agency": "GS prêt",
+          "ai": "Prêt pour GS"
+        },
+        {
+          "id": "fr-003",
+          "source": "Capture Locations",
+          "agency": "Capturer des lieux",
+          "ai": "Emplacements de capture"
+        },
+        {
+          "id": "fr-004",
+          "source": "Clear highlight",
+          "agency": "Effacer l'accentuation",
+          "ai": "Effacer la surbrillance"
+        },
+        {
+          "id": "fr-005",
+          "source": "Colorize Point Clouds",
+          "agency": "Coloriser des nuages de points",
+          "ai": "Coloriser les nuages de points"
+        },
+        {
+          "id": "fr-006",
+          "source": "Go to processed dataset",
+          "agency": "Accéder à l'ensemble de données traité",
+          "ai": "Aller à l'ensemble de données traité"
+        },
+        {
+          "id": "fr-007",
+          "source": "Toggle cursor coordinates",
+          "agency": "Afficher/masquer les coordonnées du curseur",
+          "ai": "Basculer les coordonnées du curseur"
+        },
+        {
+          "id": "fr-008",
+          "source": "Cross Dataset Aligned",
+          "agency": "Ensembles de données alignés de manière croisée",
+          "ai": "Alignement inter-ensembles de données"
+        },
+        {
+          "id": "fr-009",
+          "source": "Area Units Consumed",
+          "agency": "Unités de zone consommées",
+          "ai": "Unités de surface consommées"
+        },
+        {
+          "id": "fr-010",
+          "source": "Hidden datasets in cluster",
+          "agency": "Ensemble de données masqués dans le groupe",
+          "ai": "Ensembles de données masqués dans le groupe"
+        },
+        {
+          "id": "fr-011",
+          "source": "Processing task: {name}",
+          "agency": "Traitement de la tâche : {name}",
+          "ai": "Tâche de traitement : {name}"
+        },
+        {
+          "id": "fr-012",
+          "source": "Several lines ({linesWithError}, ...) cannot be read. ",
+          "agency": "Lecture de plusieurs lignes ({linesWithError}, ...) impossible. ",
+          "ai": "Plusieurs lignes ({linesWithError}, ...) ne peuvent pas être lues."
+        },
+        {
+          "id": "fr-013",
+          "source": "The dataset {datasetName} could not be stopped.",
+          "agency": "Échec de l'arrêt de l'ensemble de données {datasetName}.",
+          "ai": "L'ensemble de données {datasetName} n'a pas pu être arrêté."
+        },
+        {
+          "id": "fr-014",
+          "source": "Line {linesWithError} cannot be read. ",
+          "agency": "Lecture de la ligne {linesWithError} impossible. ",
+          "ai": "La ligne {linesWithError} ne peut pas être lue."
+        },
+        {
+          "id": "fr-015",
+          "source": "System software version {current} is outdated. Version {required} or higher is required to enable Cross-dataset alignment.",
+          "agency": "La version {current} du logiciel système est obsolète. La version {required} ou plus récente est requise pour activer l'alignement croisé d'ensembles de données.",
+          "ai": "La version du logiciel système {current} est obsolète. La version {required} ou supérieure est requise pour activer l'alignement inter-ensembles de données."
+        },
+        {
+          "id": "fr-016",
+          "source": "Therefore, {count, plural, one {this dataset} other {these datasets}} cannot be deleted.",
+          "agency": "Par conséquent, la suppression de {count, plural, one {cet ensemble de données} other {ces ensembles de données}} est impossible.",
+          "ai": "Par conséquent, {count, plural, one {cet ensemble de données ne peut pas être supprimé} other {ces ensembles de données ne peuvent pas être supprimés}}."
+        },
+        {
+          "id": "fr-017",
+          "source": "{eolDataset} of {all, plural, one {1 dataset} other {# datasets} } cannot be uploaded because NavVis M6 datasets are no longer supported. ",
+          "agency": "{eolDataset} sur {all, plural, one {1 ensemble de données ne peut pas être téléversé} other {# ensembles de données ne peuvent pas être téléversés} }, car les ensembles de données NavVis M6 ne sont plus pris en charge. ",
+          "ai": "{eolDataset} sur {all, plural, one {1 ensemble de données ne peut pas être téléversé} other {# ensembles de donnée ne peuvent pas être téléversés} }, car les ensembles de données NavVis M6 ne sont plus pris en charge. "
+        },
+        {
+          "id": "fr-018",
+          "source": "{count, plural, one {Dataset} other {Datasets}} in the processing task will be canceled and this cannot be undone.",
+          "agency": "{count, plural, one {L'ensemble de données dans la tâche de traitement sera annulé} other {Les ensembles de données dans la tâche de traitement seront annulés}} de manière irréversible.",
+          "ai": "{count, plural, one {L'ensemble de données} other {Les ensembles de données}} dans la tâche de traitement {count, plural, one {sera annulé} other {seront annulés}} et cela ne peut pas être annulé."
+        },
+        {
+          "id": "fr-019",
+          "source": "{processing, plural, one {1} other {#}} of {all, plural, one {1 dataset} other {# datasets}} {processing, plural, one {has} other {have}} at least one running processing task.",
+          "agency": "Au moins une tâche de traitement est en cours pour {processing, plural, one {1} other {#}} sur {all, plural, one {1 ensemble de données} other {# ensembles de données}}{processing, plural, one {} other {}}.",
+          "ai": "{processing, plural, one {1} other {#}} sur {all, plural, one {1 ensemble de données} other {# ensembles de données}} {processing, plural, one {a} other {ont}} au moins une tâche de traitement en cours."
+        },
+        {
+          "id": "fr-020",
+          "source": "Automatically generates a realistic, high-detail 3D scene for datasets captured with GS mode",
+          "agency": "Génère automatiquement une scène en 3D réaliste et hautement détaillée pour les ensembles de données capturés avec le mode GS",
+          "ai": "Génère automatiquement une scène 3D réaliste et très détaillée pour les ensembles de données capturés en mode GS"
+        },
+        {
+          "id": "fr-021",
+          "source": "It looks like the wrong unit may be being used for the control point measurements. It is also possible there was a tracking mistake in SLAM. Are you sure the surveyed control points were given in meters? The measured unit scale was: {measuredScale} m",
+          "agency": "Il semble que l'unité utilisée pour la mesure des points de contrôle soit incorrecte. Il est également possible qu'une erreur de suivi soit survenue dans SLAM. Avez-vous la certitude que les points de contrôle examinés ont été données en mètres ? L'échelle d'unités mesurées était : {measuredScale} m",
+          "ai": "Il semble que la mauvaise unité soit utilisée pour les mesures des points de contrôle. Il est également possible qu'il y ait eu une erreur de suivi dans le SLAM. Êtes-vous sûr que les points de contrôle mesurés ont été donnés en mètres ? L'échelle d'unité mesurée était : {measuredScale} m"
+        },
+        {
+          "id": "fr-022",
+          "source": "Gaussian splatting",
+          "agency": "Gaussian splatting",
+          "ai": "Splatting gaussien"
+        },
+        {
+          "id": "fr-023",
+          "source": "At least two unique control points (with distinct IDs) are required for recording but you are only using 1. This dataset cannot be processed with control points since there are not enough control points to register it. You can still process the dataset without control points.",
+          "agency": "Au moins deux points de contrôle uniques (avec des identifiants distincts) sont requis pour l'enregistrement, mais vous n'en utilisez qu'un. Le traitement de cet ensemble de données avec des points de contrôle est impossible, car il n'y a pas assez de points de contrôle pour l'enregistrer. Vous pouvez quand même traiter l'ensemble de données sans point de contrôle.",
+          "ai": "Au moins deux points de contrôle uniques (avec des identifiants distincts) sont nécessaires pour l'enregistrement, mais vous n'en utilisez qu'un seul. Cet ensemble de données ne peut pas être traité avec des points de contrôle car il n'y en a pas assez pour l'enregistrer. Vous pouvez toujours traiter l'ensemble de données sans points de contrôle."
+        },
+        {
+          "id": "fr-024",
+          "source": "The mean control point deviation decreased from {originMeanError} to {flippedMeanError} when flipping the x and y coordinates of the surveyed control points. This likely means the surveyed control points were given in a left handed coordinate system. However the control points must be given in a right handed coordinate system.",
+          "agency": "La déviation moyenne des points de contrôle a baissé de {originMeanError} à {flippedMeanError} lorsque les coordonnées x et y des points de contrôle relevés ont été inversés. Cela signifie probablement que les points de contrôle relevés ont été fournis dans un système de coordonnées à gauche. Toutefois, les points de contrôle nécessitent un système de coordonnées à droite.",
+          "ai": "L'écart moyen des points de contrôle a diminué de {originMeanError} à {flippedMeanError} lors de l'inversion des coordonnées x et y des points de contrôle mesurés. Cela signifie probablement que les points de contrôle mesurés ont été fournis dans un système de coordonnées gauche. Cependant, les points de contrôle doivent être fournis dans un système de coordonnées droit."
+        },
+        {
+          "id": "fr-025",
+          "source": "Cross-dataset alignment requires at least 2 datasets to be selected for processing.",
+          "agency": "Au moins 2 ensembles de données doivent être sélectionnés pour le traitement pour l'alignement croisé d'ensembles de données.",
+          "ai": "L'alignement inter-ensembles de données nécessite qu'au moins 2 ensembles de données soient sélectionnés pour le traitement."
+        }
+      ]
+    },
+    {
+      "code": "zh",
+      "name": "Chinese (Simplified)",
+      "items": [
+        {
+          "id": "zh-001",
+          "source": "and",
+          "agency": "以及",
+          "ai": "和"
+        },
+        {
+          "id": "zh-002",
+          "source": "Search...",
+          "agency": "搜索…",
+          "ai": "搜索..."
+        },
+        {
+          "id": "zh-003",
+          "source": "Capture Locations",
+          "agency": "采集位置",
+          "ai": "捕获位置"
+        },
+        {
+          "id": "zh-004",
+          "source": "Deleting...",
+          "agency": "正在删除…",
+          "ai": "正在删除..."
+        },
+        {
+          "id": "zh-005",
+          "source": "Colorize Point Clouds",
+          "agency": "为点云着色",
+          "ai": "着色点云"
+        },
+        {
+          "id": "zh-006",
+          "source": "Hidden datasets in cluster",
+          "agency": "集群中隐藏的数据集",
+          "ai": "集群中的隐藏数据集"
+        },
+        {
+          "id": "zh-007",
+          "source": "Point Cloud Resolution (mm)",
+          "agency": "点云分辨率 (mm)",
+          "ai": "点云分辨率（毫米）"
+        },
+        {
+          "id": "zh-008",
+          "source": "Contains datasets matching active search filter",
+          "agency": "包含符合当前搜索过滤条件的数据集",
+          "ai": "包含与活动搜索过滤器匹配的数据集"
+        },
+        {
+          "id": "zh-009",
+          "source": "Area Units Consumed",
+          "agency": "已消耗面积单位",
+          "ai": "面积单位消耗"
+        },
+        {
+          "id": "zh-010",
+          "source": "Billed Area (m²)",
+          "agency": "计费面积 (m²)",
+          "ai": "计费面积（平方米）"
+        },
+        {
+          "id": "zh-011",
+          "source": "Processing task: {name}",
+          "agency": "正在处理任务：{name}",
+          "ai": "处理任务：{name}"
+        },
+        {
+          "id": "zh-012",
+          "source": "Share {type}",
+          "agency": "分享{type}",
+          "ai": "分享 {type}"
+        },
+        {
+          "id": "zh-013",
+          "source": "Several lines ({linesWithError}, ...) cannot be read. ",
+          "agency": "若干行 ({linesWithError}, …) 无法读取。",
+          "ai": "无法读取多行（{linesWithError}，...）。"
+        },
+        {
+          "id": "zh-014",
+          "source": "Line {linesWithError} cannot be read. ",
+          "agency": "无法读取第 {linesWithError} 行。",
+          "ai": "第 {linesWithError} 行无法读取。"
+        },
+        {
+          "id": "zh-015",
+          "source": "System software version {current} is outdated. Version {required} or higher is required to enable Cross-dataset alignment.",
+          "agency": "系统软件版本 {current} 已过时。需要 {required} 或更高版本才能启用跨数据集对齐。",
+          "ai": "系统软件版本 {current} 已过时。需要版本 {required} 或更高版本才能启用跨数据集对齐。"
+        },
+        {
+          "id": "zh-016",
+          "source": "Therefore, {count, plural, one {this dataset} other {these datasets}} cannot be deleted.",
+          "agency": "因此，无法删除{count, plural, one {此数据集} other {这些数据集}}。",
+          "ai": "因此，{count, plural, other {这些数据集}}无法删除。"
+        },
+        {
+          "id": "zh-017",
+          "source": "{count, plural, one {# control point is} other {# control points are}} misaligned.",
+          "agency": "{count, plural, other {# 个控制点}}未对齐。",
+          "ai": "{count, plural, other {# 个控制点}}有偏差。"
+        },
+        {
+          "id": "zh-018",
+          "source": "{count, plural, one {Dataset} other {Datasets}} in the processing task will be canceled and this cannot be undone.",
+          "agency": "处理任务中的{count, plural, other {数据集}}将被取消，且此操作无法撤销。",
+          "ai": "处理任务中的{count, plural, other {数据集}}将被取消，此操作无法撤消。"
+        },
+        {
+          "id": "zh-019",
+          "source": "{processing, plural, one {1} other {#}} of {all, plural, one {1 dataset} other {# datasets}} {processing, plural, one {has} other {have}} at least one running processing task.",
+          "agency": "{{all, plural, other {# 个数据集}}中的 {processing, plural, other {#}} 个数据集至少{processing, plural,other {有}}一个正在运行的处理任务。",
+          "ai": "{all, plural, other {# 个数据集}}中的 {processing, plural, other {#}} 个至少有一个正在运行的处理任务。"
+        },
+        {
+          "id": "zh-020",
+          "source": "Automatically generates a realistic, high-detail 3D scene for datasets captured with GS mode",
+          "agency": "为使用 GS 模式采集的数据集自动生成逼真的高精度 3D 场景",
+          "ai": "自动为使用 GS 模式捕获的数据集生成逼真、高细节的 3D 场景"
+        },
+        {
+          "id": "zh-021",
+          "source": "It looks like the wrong unit may be being used for the control point measurements. It is also possible there was a tracking mistake in SLAM. Are you sure the surveyed control points were given in meters? The measured unit scale was: {measuredScale} m",
+          "agency": "控制点测量似乎使用了错误的单位。也可能是 SLAM 跟踪出现了错误。请确认测量的控制点是否以“米”为单位？测得的单位比例为：{measuredScale} 米",
+          "ai": "看起来控制点测量可能使用了错误的单位。也可能是 SLAM 中出现了跟踪错误。您确定测量的控制点是以米为单位的吗？测量的单位比例为：{measuredScale} 米"
+        },
+        {
+          "id": "zh-022",
+          "source": "Blurring Units Consumed",
+          "agency": "已消耗模糊处理单位",
+          "ai": "模糊单位消耗"
+        },
+        {
+          "id": "zh-023",
+          "source": "At least two unique control points (with distinct IDs) are required for recording but you are only using 1. This dataset cannot be processed with control points since there are not enough control points to register it. You can still process the dataset without control points.",
+          "agency": "记录至少需要两个唯一的控制点（具有不同的 ID），但您目前仅使用了 1 个。由于没有足够的控制点进行配准，该数据集无法使用控制点进行处理。您仍可以在不使用控制点的情况下处理该数据集。",
+          "ai": "记录至少需要两个唯一的控制点（具有不同的 ID），但您只使用了 1 个。由于没有足够的控制点来注册此数据集，因此无法使用控制点处理此数据集。您仍然可以在没有控制点的情况下处理数据集。"
+        },
+        {
+          "id": "zh-024",
+          "source": "The mean control point deviation decreased from {originMeanError} to {flippedMeanError} when flipping the x and y coordinates of the surveyed control points. This likely means the surveyed control points were given in a left handed coordinate system. However the control points must be given in a right handed coordinate system.",
+          "agency": "将测量控制点的 x 和 y 坐标互换后，平均控制点偏差从 {originMeanError} 降至 {flippedMeanError}。这很可能意味着提供的测量控制点使用的是左手坐标系。然而，提供的控制点必须使用右手坐标系。",
+          "ai": "当翻转测量控制点的 x 和 y 坐标时，平均控制点偏差从 {originMeanError} 减少到 {flippedMeanError}。这可能意味着测量控制点是在左手坐标系中给出的。但是控制点必须在右手坐标系中给出。"
+        },
+        {
+          "id": "zh-025",
+          "source": "Cross-dataset alignment requires at least 2 datasets to be selected for processing.",
+          "agency": "跨数据集对齐要求至少选择 2 个数据集进行处理。",
+          "ai": "跨数据集对齐需要至少选择 2 个数据集进行处理。"
+        }
+      ]
+    },
+    {
+      "code": "zh-tw",
+      "name": "Chinese (Traditional)",
+      "items": [
+        {
+          "id": "zh-tw-001",
+          "source": "and",
+          "agency": "以及",
+          "ai": "和"
+        },
+        {
+          "id": "zh-tw-002",
+          "source": "Deleting...",
+          "agency": "正在刪除...",
+          "ai": "刪除中..."
+        },
+        {
+          "id": "zh-tw-003",
+          "source": "Recorded At",
+          "agency": "記錄時間：",
+          "ai": "記錄時間"
+        },
+        {
+          "id": "zh-tw-004",
+          "source": "Clear highlight",
+          "agency": "清除高光",
+          "ai": "清除醒目提示"
+        },
+        {
+          "id": "zh-tw-005",
+          "source": "Colorize Point Clouds",
+          "agency": "為點雲著色",
+          "ai": "著色點雲"
+        },
+        {
+          "id": "zh-tw-006",
+          "source": "Dataset Identifier",
+          "agency": "資料集標識符",
+          "ai": "資料集識別碼"
+        },
+        {
+          "id": "zh-tw-007",
+          "source": "Hidden datasets in cluster",
+          "agency": "叢集中隱藏的資料集",
+          "ai": "叢集中的隱藏資料集"
+        },
+        {
+          "id": "zh-tw-008",
+          "source": "Point Cloud Resolution (mm)",
+          "agency": "點雲解析度 (mm)",
+          "ai": "點雲解析度（毫米）"
+        },
+        {
+          "id": "zh-tw-009",
+          "source": "Area Units Consumed",
+          "agency": "已消耗的面積單位",
+          "ai": "已消耗面積單位"
+        },
+        {
+          "id": "zh-tw-010",
+          "source": "Surveyed Control Point File",
+          "agency": "量測控制點檔案",
+          "ai": "測量控制點檔案"
+        },
+        {
+          "id": "zh-tw-011",
+          "source": "Processing task: {name}",
+          "agency": "正在處理任務：{name}",
+          "ai": "處理任務：{name}"
+        },
+        {
+          "id": "zh-tw-012",
+          "source": "Share {type}",
+          "agency": "分享{type}",
+          "ai": "分享 {type}"
+        },
+        {
+          "id": "zh-tw-013",
+          "source": "The dataset {datasetName} could not be stopped.",
+          "agency": "資料集 {datasetName} 無法停止。",
+          "ai": "無法停止資料集 {datasetName}。"
+        },
+        {
+          "id": "zh-tw-014",
+          "source": "Line {linesWithError} cannot be read. ",
+          "agency": "無法讀取第 {linesWithError} 行。 ",
+          "ai": "無法讀取第 {linesWithError} 行。"
+        },
+        {
+          "id": "zh-tw-015",
+          "source": "System software version {current} is outdated. Version {required} or higher is required to enable Cross-dataset alignment.",
+          "agency": "系統軟體版本 {current} 已過時。需要 {required} 或更高版本才能啟用跨資料集對齊。",
+          "ai": "系統軟體版本 {current} 已過時。需要版本 {required} 或更高版本才能啟用跨資料集對齊。"
+        },
+        {
+          "id": "zh-tw-016",
+          "source": "Therefore, {count, plural, one {this dataset} other {these datasets}} cannot be deleted.",
+          "agency": "因此，無法刪除{count, plural, one {此資料集} other {這些資料集}}。",
+          "ai": "因此，無法刪除{count, plural, other {這些資料集}}。"
+        },
+        {
+          "id": "zh-tw-017",
+          "source": "{count, plural, one {# control point is} other {# control points are}} misaligned.",
+          "agency": "{count, plural, one {# 個控制點} other {# 個控制點}}未對齊。",
+          "ai": "{count, plural, other {# 個控制點}}未對齊。"
+        },
+        {
+          "id": "zh-tw-018",
+          "source": "{count, plural, one {Dataset} other {Datasets}} in the processing task will be canceled and this cannot be undone.",
+          "agency": "處理中任務的{count, plural, one {資料集} other {資料集}}將被取消，而且此操作無法復原。",
+          "ai": "處理任務中的{count, plural, other {資料集}}將被取消，且無法復原。"
+        },
+        {
+          "id": "zh-tw-019",
+          "source": "{processing, plural, one {1} other {#}} of {all, plural, one {1 dataset} other {# datasets}} {processing, plural, one {has} other {have}} at least one running processing task.",
+          "agency": "{all, plural, one {1 個資料集} other {# 個資料集}}中的{processing, plural, one {1} other {#}}個至少{processing, plural, one {有} other {有}}一個正在執行的處理任務。",
+          "ai": "{all, plural, other {# 個資料集}}中的 {processing, plural, other {#}} 個至少有一個正在執行的處理任務。"
+        },
+        {
+          "id": "zh-tw-020",
+          "source": "Automatically generates a realistic, high-detail 3D scene for datasets captured with GS mode",
+          "agency": "就使用 GS 模式擷取的資料集自動生成高細節且逼真的 3D 場景",
+          "ai": "自動為使用 GS 模式擷取的資料集產生逼真、高細節的 3D 場景"
+        },
+        {
+          "id": "zh-tw-021",
+          "source": "It looks like the wrong unit may be being used for the control point measurements. It is also possible there was a tracking mistake in SLAM. Are you sure the surveyed control points were given in meters? The measured unit scale was: {measuredScale} m",
+          "agency": "控制點測量似乎使用了錯誤的單位，也有可能是 SLAM 追蹤出現錯誤。請確認測量的控制點是否以「公尺」為單位？測得的單位比例為：{measuredScale} 公尺",
+          "ai": "看起來控制點測量可能使用了錯誤的單位。也可能是 SLAM 中的追蹤錯誤。您確定測量的控制點是以公尺為單位嗎？測量的單位比例為：{measuredScale} m"
+        },
+        {
+          "id": "zh-tw-022",
+          "source": "Blurring Units Consumed",
+          "agency": "已消耗模糊處理單位",
+          "ai": "已消耗模糊單位"
+        },
+        {
+          "id": "zh-tw-023",
+          "source": "At least two unique control points (with distinct IDs) are required for recording but you are only using 1. This dataset cannot be processed with control points since there are not enough control points to register it. You can still process the dataset without control points.",
+          "agency": "記錄至少需要兩個唯一的控制點 (具有不同 ID )，但您目前僅使用一個。由於沒有足夠的控制點進行配準，此資料集無法使用控制點進行處理。您仍能在不使用控制點的情況下處理此資料集。",
+          "ai": "記錄至少需要兩個唯一的控制點（具有不同的 ID），但您只使用了 1 個。由於沒有足夠的控制點來註冊此資料集，因此無法使用控制點處理此資料集。您仍然可以在沒有控制點的情況下處理資料集。"
+        },
+        {
+          "id": "zh-tw-024",
+          "source": "The mean control point deviation decreased from {originMeanError} to {flippedMeanError} when flipping the x and y coordinates of the surveyed control points. This likely means the surveyed control points were given in a left handed coordinate system. However the control points must be given in a right handed coordinate system.",
+          "agency": "將測量控制點的 X 與 Y 座標互換後，平均控制點偏差從 {originMeanError} 降至 {flippedMeanError}。這很可能代表所提供的測量控制點採用左手座標系，然而，控制點必須使用右手座標系。",
+          "ai": "翻轉測量控制點的 x 和 y 座標時，平均控制點偏差從 {originMeanError} 降低到 {flippedMeanError}。這可能表示測量控制點是在左手座標系統中給定的。但是控制點必須在右手座標系統中給定。"
+        },
+        {
+          "id": "zh-tw-025",
+          "source": "Cross-dataset alignment requires at least 2 datasets to be selected for processing.",
+          "agency": "跨資料集對齊至少需選擇 2 個資料集進行處理。",
+          "ai": "跨資料集對齊需要至少選擇 2 個資料集進行處理。"
+        }
+      ]
+    },
+    {
+      "code": "ja",
+      "name": "Japanese",
+      "items": [
+        {
+          "id": "ja-001",
+          "source": "GS Ready",
+          "agency": "GS 準備完了",
+          "ai": "GS対応"
+        },
+        {
+          "id": "ja-002",
+          "source": "Cropping box",
+          "agency": "切り取りボックス",
+          "ai": "クロッピングボックス"
+        },
+        {
+          "id": "ja-003",
+          "source": "Capture Locations",
+          "agency": "場所を読み取る",
+          "ai": "キャプチャ位置"
+        },
+        {
+          "id": "ja-004",
+          "source": "Resolution",
+          "agency": "画質",
+          "ai": "解像度"
+        },
+        {
+          "id": "ja-005",
+          "source": "Colorize Point Clouds",
+          "agency": "点群を色分けする",
+          "ai": "点群の着色"
+        },
+        {
+          "id": "ja-006",
+          "source": "Go to processed dataset",
+          "agency": "処理済みのデータセットへ移動",
+          "ai": "処理済みデータセットに移動"
+        },
+        {
+          "id": "ja-007",
+          "source": "Toggle cursor coordinates",
+          "agency": "カーソルの座標を切り替える",
+          "ai": "カーソル座標を切り替え"
+        },
+        {
+          "id": "ja-008",
+          "source": "Cross Dataset Aligned",
+          "agency": "データセットの相互アライメント",
+          "ai": "クロスデータセットアライメント済み"
+        },
+        {
+          "id": "ja-009",
+          "source": "Area Units Consumed",
+          "agency": "消費されたエリア単位",
+          "ai": "エリアユニット消費済み"
+        },
+        {
+          "id": "ja-010",
+          "source": "Billed Area (m²)",
+          "agency": "請求されたエリア (m²)",
+          "ai": "請求対象エリア (m²)"
+        },
+        {
+          "id": "ja-011",
+          "source": "Processing task: {name}",
+          "agency": "処理中のタスク: {name}",
+          "ai": "処理タスク：{name}"
+        },
+        {
+          "id": "ja-012",
+          "source": "Several lines ({linesWithError}, ...) cannot be read. ",
+          "agency": "複数の線 ({linesWithError}、...）を読み取れません。 ",
+          "ai": "複数の行（{linesWithError}、...）を読み取ることができません。"
+        },
+        {
+          "id": "ja-013",
+          "source": "Version {required} or higher is required to enable Cross-dataset alignment.",
+          "agency": "データセットの相互アライメントを有効にするには、バージョン {required} 以上が必要です。",
+          "ai": "データセット間アライメントを有効にするには、バージョン {required} 以上が必要です。"
+        },
+        {
+          "id": "ja-014",
+          "source": "Line {linesWithError} cannot be read. ",
+          "agency": "線 {linesWithError} を読み取れません。",
+          "ai": "{linesWithError}行目を読み取れません。"
+        },
+        {
+          "id": "ja-015",
+          "source": "System software version {current} is outdated. Version {required} or higher is required to enable Cross-dataset alignment.",
+          "agency": "システムソフトウェアバージョン {current} は古くなっています。データセットの相互アライメントを有効にするにはバージョン {required} 以降が必要です。",
+          "ai": "システムソフトウェアバージョン{current}は古くなっています。クロスデータセットアライメントを有効にするにはバージョン{required}以上が必要です。"
+        },
+        {
+          "id": "ja-016",
+          "source": "Therefore, {count, plural, one {this dataset} other {these datasets}} cannot be deleted.",
+          "agency": "そのため、{count, plural, other {データセット}}を削除できません。",
+          "ai": "そのため、{count, plural, other {これらのデータセット}}を削除できません。"
+        },
+        {
+          "id": "ja-017",
+          "source": "{count, plural, one {# control point is} other {# control points are}} misaligned.",
+          "agency": "{count, plural, other {# 個の制御点が}}ずれています。",
+          "ai": "{count, plural, other {# 個のコントロールポイント}}がずれています。"
+        },
+        {
+          "id": "ja-018",
+          "source": "{count, plural, one {Dataset} other {Datasets}} in the processing task will be canceled and this cannot be undone.",
+          "agency": "処理タスクの{count, plural, other {データセット}}はキャンセルされます。この操作は取り消せません。",
+          "ai": "処理タスク内の{count, plural, other {データセット}}がキャンセルされます。この操作は元に戻せません。"
+        },
+        {
+          "id": "ja-019",
+          "source": "{processing, plural, one {1} other {#}} of {all, plural, one {1 dataset} other {# datasets}} {processing, plural, one {has} other {have}} at least one running processing task.",
+          "agency": "{all, plural, other {# 個のデータセット}}のうち{processing, plural, other {# 個}}に 1 つ以上の実行中の処理タスクが{processing, plural, other {あります}}。",
+          "ai": "{all, plural, other {# 個のデータセット}}のうち {processing, plural, other {#}} 個に少なくとも1つの実行中の処理タスクがあります。"
+        },
+        {
+          "id": "ja-020",
+          "source": "Automatically generates a realistic, high-detail 3D scene for datasets captured with GS mode",
+          "agency": "GS モードで読み取られたデータセットに現実的な高精細 3D シーンが自動的に生成されます",
+          "ai": "GSモードでキャプチャされたデータセットに対して、リアルで高精細な3Dシーンを自動生成します"
+        },
+        {
+          "id": "ja-021",
+          "source": "It looks like the wrong unit may be being used for the control point measurements. It is also possible there was a tracking mistake in SLAM. Are you sure the surveyed control points were given in meters? The measured unit scale was: {measuredScale} m",
+          "agency": "制御点の測定に誤った単位が使用されているようです。また、SLAM にトラッキングミスがある可能性があります。計測済みの制御点の単位はメートルですか？測定された単位スケール: {measuredScale}m",
+          "ai": "コントロールポイント測定に間違った単位が使用されている可能性があります。SLAMでトラッキングミスが発生した可能性もあります。測量されたコントロールポイントがメートル単位で指定されていることを確認してください。測定された単位スケールは：{measuredScale} m"
+        },
+        {
+          "id": "ja-022",
+          "source": "Blurring Units Consumed",
+          "agency": "消費された単位をぼかし中",
+          "ai": "ぼかしユニット消費済み"
+        },
+        {
+          "id": "ja-023",
+          "source": "At least two unique control points (with distinct IDs) are required for recording but you are only using 1. This dataset cannot be processed with control points since there are not enough control points to register it. You can still process the dataset without control points.",
+          "agency": "記録するには 2 つ以上の制御点 (異なる ID) が必要ですが、1 つしか使用されていません。データセットを登録するには制御点が不足しているため、このデータセットを制御点で処理することはできません。制御点がなくてもデータセットを処理することは可能です。",
+          "ai": "記録には少なくとも2つの一意のコントロールポイント（異なるIDを持つ）が必要ですが、1つしか使用していません。このデータセットを登録するのに十分なコントロールポイントがないため、コントロールポイントを使用して処理することはできません。コントロールポイントなしでデータセットを処理することは可能です。"
+        },
+        {
+          "id": "ja-024",
+          "source": "The mean control point deviation decreased from {originMeanError} to {flippedMeanError} when flipping the x and y coordinates of the surveyed control points. This likely means the surveyed control points were given in a left handed coordinate system. However the control points must be given in a right handed coordinate system.",
+          "agency": "平均制御点偏差は、計測済みの制御点の x と y の座標を入れ替えると、{originMeanError} から {flippedMeanError} に減少します。これはおそらく、計測された制御点が左手座標系で指定されていたことを意味しますが、制御点は右手座標系に指定する必要があります。",
+          "ai": "測量されたコントロールポイントのx座標とy座標を反転させると、平均コントロールポイント偏差が {originMeanError} から {flippedMeanError} に減少しました。これは、測量されたコントロールポイントが左手座標系で指定されていた可能性が高いことを意味します。ただし、コントロールポイントは右手座標系で指定する必要があります。"
+        },
+        {
+          "id": "ja-025",
+          "source": "Cross-dataset alignment requires at least 2 datasets to be selected for processing.",
+          "agency": "データセットの相互アライメントには、処理するデータセットが 2 つ以上選択されている必要があります。",
+          "ai": "クロスデータセットアライメントには、処理用に少なくとも2つのデータセットを選択する必要があります。"
+        }
+      ]
+    },
+    {
+      "code": "cs",
+      "name": "Czech",
+      "items": [
+        {
+          "id": "cs-001",
+          "source": "GS Ready",
+          "agency": "GS připraveno",
+          "ai": "Připraveno pro GS"
+        },
+        {
+          "id": "cs-002",
+          "source": "Cropping box",
+          "agency": "Rámeček pro oříznutí",
+          "ai": "Ořezový box"
+        },
+        {
+          "id": "cs-003",
+          "source": "Capture Locations",
+          "agency": "Zachytit polohy",
+          "ai": "Místa snímání"
+        },
+        {
+          "id": "cs-004",
+          "source": "Deleting...",
+          "agency": "Odstraňování...",
+          "ai": "Mazání..."
+        },
+        {
+          "id": "cs-005",
+          "source": "Recorded At",
+          "agency": "Zaznamenáno dne ",
+          "ai": "Zaznamenáno"
+        },
+        {
+          "id": "cs-006",
+          "source": "Go to processed dataset",
+          "agency": "Přejít do zpracované datové sady",
+          "ai": "Přejít na zpracovanou datovou sadu"
+        },
+        {
+          "id": "cs-007",
+          "source": "Hidden datasets in cluster",
+          "agency": "Skryté datové sady v clusteru",
+          "ai": "Skryté datové sady v clusteru"
+        },
+        {
+          "id": "cs-008",
+          "source": "Cross Dataset Aligned",
+          "agency": "Zarovnáno mezi datovými sadami",
+          "ai": "Zarovnáno napříč datovými sadami"
+        },
+        {
+          "id": "cs-009",
+          "source": "Surveyed Control Point File",
+          "agency": "Soubor s vyměřenými kontrolními body",
+          "ai": "Soubor zaměřených kontrolních bodů"
+        },
+        {
+          "id": "cs-010",
+          "source": "Billed Area (m²)",
+          "agency": "Zúčtovaná plocha (m²)",
+          "ai": "Účtovaná plocha (m²)"
+        },
+        {
+          "id": "cs-011",
+          "source": "Processing task: {name}",
+          "agency": "Zpracovávání úkolu: {name}",
+          "ai": "Úloha zpracování: {name}"
+        },
+        {
+          "id": "cs-012",
+          "source": "Several lines ({linesWithError}, ...) cannot be read. ",
+          "agency": "Několik řádků ({linesWithError}, ...) nelze přečíst. ",
+          "ai": "Několik řádků ({linesWithError}, ...) nelze přečíst."
+        },
+        {
+          "id": "cs-013",
+          "source": "Version {required} or higher is required to enable Cross-dataset alignment.",
+          "agency": "K aktivaci zarovnání mezi datovými sadami je nutná verze {required} nebo vyšší.",
+          "ai": "Pro povolení zarovnání napříč datovými sadami je vyžadována verze {required} nebo vyšší."
+        },
+        {
+          "id": "cs-014",
+          "source": "Line {linesWithError} cannot be read. ",
+          "agency": "Řádek {linesWithError} nelze přečíst. ",
+          "ai": "Řádek {linesWithError} nelze přečíst."
+        },
+        {
+          "id": "cs-015",
+          "source": "System software version {current} is outdated. Version {required} or higher is required to enable Cross-dataset alignment.",
+          "agency": "Verze systémového softwaru {current} je zastaralá. K aktivaci zarovnání mezi datovými sadami je nutná verze {required} nebo novější.",
+          "ai": "Verze systémového softwaru {current} je zastaralá. Pro povolení zarovnání napříč datovými sadami je vyžadována verze {required} nebo vyšší."
+        },
+        {
+          "id": "cs-016",
+          "source": "Therefore, {count, plural, one {this dataset} other {these datasets}} cannot be deleted.",
+          "agency": "Proto {count, plural, one {tuto datovou sadu} few {tyto datové sady} many {tyto datové sady} other {tyto datové sady}} nelze smazat.",
+          "ai": "Proto {count, plural, one {tuto datovou sadu} few {tyto datové sady} many {tyto datové sady} other {tyto datové sady}} nelze odstranit."
+        },
+        {
+          "id": "cs-017",
+          "source": "{count, plural, one {# control point is} other {# control points are}} misaligned.",
+          "agency": "{count, plural, one {# kontrolní bod je nezarovnaný} few {# kontrolní body jsou nezarovnané} many {# kontrolního bodu je nezarovnaného} other {# kontrolních bodů je nezarovnaných}}.",
+          "ai": "{count, plural, one {# kontrolní bod je} few {# kontrolní body jsou} many {# kontrolních bodů je} other {# kontrolních bodů je}} nezarovnáno."
+        },
+        {
+          "id": "cs-018",
+          "source": "{count, plural, one {Dataset} other {Datasets}} in the processing task will be canceled and this cannot be undone.",
+          "agency": "{count, plural, one {Datová sada v úloze zpracování bude zrušena} few {Datové sady v úloze zpracování budou zrušeny} many {Datové sady v úloze zpracování budou zrušeny} other {Datové sady v úloze zpracování budou zrušeny}} v úloze zpracování budou zrušeny a tento krok nelze vrátit zpět.",
+          "ai": "{count, plural, one {Datová sada} few {Datové sady} many {Datových sad} other {Datových sad}} v úloze zpracování bude zrušeno a tuto akci nelze vrátit zpět."
+        },
+        {
+          "id": "cs-019",
+          "source": "{processing, plural, one {1} other {#}} of {all, plural, one {1 dataset} other {# datasets}} {processing, plural, one {has} other {have}} at least one running processing task.",
+          "agency": "{processing, plural, one {1} few {#} many {#} other {#}} {all, plural, one {z 1 datové sady} few {ze # datových sad} many {z # datové sady} other {z # datových sad}} {processing, plural, one {má} few {mají} many {má} other {má}} alespoň jednu běžící úlohu zpracování.",
+          "ai": "{processing, plural, one {1} few {#} many {#} other {#}} z {all, plural, one {1 datové sady} few {# datových sad} many {# datové sady} other {# datových sad}} {processing, plural, one {má} few {mají} many {má} other {má}} alespoň jednu běžící úlohu zpracování."
+        },
+        {
+          "id": "cs-020",
+          "source": "Automatically generates a realistic, high-detail 3D scene for datasets captured with GS mode",
+          "agency": "Automaticky generuje realistickou a velmi detailní 3D scénu pro datové sady pořízené v režimu GS",
+          "ai": "Automaticky generuje realistickou, vysoce detailní 3D scénu pro datové sady zachycené v režimu GS"
+        },
+        {
+          "id": "cs-021",
+          "source": "It looks like the wrong unit may be being used for the control point measurements. It is also possible there was a tracking mistake in SLAM. Are you sure the surveyed control points were given in meters? The measured unit scale was: {measuredScale} m",
+          "agency": "Zdá se, že pro měření kontrolních bodů byla možná použita nesprávná jednotka. Je také možné, že došlo k chybě při sledování v rámci SLAM. Jste si jisti, že naměřené kontrolní body byly zadány v metrech? Měřítko měřené jednotky bylo: {measuredScale} m",
+          "ai": "Zdá se, že pro měření kontrolních bodů mohla být použita nesprávná jednotka. Je také možné, že došlo k chybě sledování v SLAM. Jste si jisti, že zaměřené kontrolní body byly zadány v metrech? Naměřené měřítko jednotky bylo: {measuredScale} m"
+        },
+        {
+          "id": "cs-022",
+          "source": "Blurring Units Consumed",
+          "agency": "Spotřebované jednotky rozostření",
+          "ai": "Spotřebované jednotky rozmazání"
+        },
+        {
+          "id": "cs-023",
+          "source": "At least two unique control points (with distinct IDs) are required for recording but you are only using 1. This dataset cannot be processed with control points since there are not enough control points to register it. You can still process the dataset without control points.",
+          "agency": "K pořízení záznamu jsou zapotřebí alespoň dva jedinečné kontrolní body (s odlišnými ID), ale vy používáte pouze jeden. Tuto datovou sadu nelze zpracovat s využitím kontrolních bodů, protože jich není dostatek k její registraci. Datovou sadu však můžete zpracovat i bez kontrolních bodů.",
+          "ai": "Pro záznam jsou vyžadovány alespoň dva jedinečné kontrolní body (s odlišnými ID), ale používáte pouze 1. Tuto datovou sadu nelze zpracovat s kontrolními body, protože jich není dostatek pro její registraci. Datovou sadu můžete stále zpracovat bez kontrolních bodů."
+        },
+        {
+          "id": "cs-024",
+          "source": "The mean control point deviation decreased from {originMeanError} to {flippedMeanError} when flipping the x and y coordinates of the surveyed control points. This likely means the surveyed control points were given in a left handed coordinate system. However the control points must be given in a right handed coordinate system.",
+          "agency": "Při převrácení souřadnic x a y naměřených kontrolních bodů se průměrná odchylka kontrolních bodů snížila z {originMeanError} na {flippedMeanError}. To pravděpodobně znamená, že naměřené kontrolní body byly zadány v levotočivém souřadnicovém systému. Kontrolní body však musí být zadány v pravotočivém souřadnicovém systému.",
+          "ai": "Průměrná odchylka kontrolních bodů se snížila z {originMeanError} na {flippedMeanError} při prohození souřadnic x a y zaměřených kontrolních bodů. To pravděpodobně znamená, že zaměřené kontrolní body byly zadány v levotočivém souřadnicovém systému. Kontrolní body však musí být zadány v pravotočivém souřadnicovém systému."
+        },
+        {
+          "id": "cs-025",
+          "source": "Cross-dataset alignment requires at least 2 datasets to be selected for processing.",
+          "agency": "Zarovnání mezi datovými sadami vyžaduje výběr alespoň dvou datových sad ke zpracování.",
+          "ai": "Zarovnání napříč datovými sadami vyžaduje výběr alespoň 2 datových sad pro zpracování."
+        }
+      ]
+    },
+    {
+      "code": "de",
+      "name": "German",
+      "items": [
+        {
+          "id": "de-001",
+          "source": "Deleting...",
+          "agency": "Löschen...",
+          "ai": "Wird gelöscht..."
+        },
+        {
+          "id": "de-002",
+          "source": "Cropping box",
+          "agency": "Zuschneidefeld",
+          "ai": "Zuschneiderahmen"
+        },
+        {
+          "id": "de-003",
+          "source": "Capture Locations",
+          "agency": "Orte erfassen",
+          "ai": "Erfassungsorte"
+        },
+        {
+          "id": "de-004",
+          "source": "Clear highlight",
+          "agency": "Markierung löschen",
+          "ai": "Hervorhebung löschen"
+        },
+        {
+          "id": "de-005",
+          "source": "Recorded At",
+          "agency": "Aufgenommen am/um",
+          "ai": "Aufgenommen am"
+        },
+        {
+          "id": "de-006",
+          "source": "Dataset Identifier",
+          "agency": "Datensatz-ID",
+          "ai": "Datensatz-Kennung"
+        },
+        {
+          "id": "de-007",
+          "source": "Toggle cursor coordinates",
+          "agency": "Cursor-Koordinaten ein/aus",
+          "ai": "Cursor-Koordinaten umschalten"
+        },
+        {
+          "id": "de-008",
+          "source": "Cross Dataset Aligned",
+          "agency": "Datensätze abgeglichen",
+          "ai": "Datensatzübergreifend ausgerichtet"
+        },
+        {
+          "id": "de-009",
+          "source": "Area Units Consumed",
+          "agency": "Verbrauchte Flächen-Units",
+          "ai": "Verbrauchte Flächeneinheiten"
+        },
+        {
+          "id": "de-010",
+          "source": "Hidden datasets in cluster",
+          "agency": "Verborgene Datensätze im Cluster",
+          "ai": "Ausgeblendete Datensätze im Cluster"
+        },
+        {
+          "id": "de-011",
+          "source": "Several lines ({linesWithError}, ...) cannot be read. ",
+          "agency": "Einige Zeilen ({linesWithError}, ...) lassen sich nicht lesen. ",
+          "ai": "Mehrere Zeilen ({linesWithError}, ...) können nicht gelesen werden."
+        },
+        {
+          "id": "de-012",
+          "source": "Share {type}",
+          "agency": "„{type}“ teilen",
+          "ai": "{type} teilen"
+        },
+        {
+          "id": "de-013",
+          "source": "The dataset {datasetName} could not be stopped.",
+          "agency": "Der Datensatz „{datasetName}“ konnte nicht angehalten werden.",
+          "ai": "Der Datensatz {datasetName} konnte nicht gestoppt werden."
+        },
+        {
+          "id": "de-014",
+          "source": "Line {linesWithError} cannot be read. ",
+          "agency": "Zeile {linesWithError} lässt sich nicht lesen. ",
+          "ai": "Zeile {linesWithError} kann nicht gelesen werden."
+        },
+        {
+          "id": "de-015",
+          "source": "System software version {current} is outdated. Version {required} or higher is required to enable Cross-dataset alignment.",
+          "agency": "Die Systemsoftwareversion {current} ist veraltet. Um den Datensatz-Abgleich zu aktivieren, ist Version {required} oder höher erforderlich.",
+          "ai": "Die Systemsoftwareversion {current} ist veraltet. Version {required} oder höher ist erforderlich, um die datensatzübergreifende Ausrichtung zu aktivieren."
+        },
+        {
+          "id": "de-016",
+          "source": "Therefore, {count, plural, one {this dataset} other {these datasets}} cannot be deleted.",
+          "agency": "{count, plural, one {Dieser Datensatz kann} other {Diese Datensätze können}} daher nicht gelöscht werden.",
+          "ai": "Daher {count, plural, one {kann dieser Datensatz} other {können diese Datensätze}} nicht gelöscht werden."
+        },
+        {
+          "id": "de-017",
+          "source": "{count} {count, plural, one {control point is} other {control points are}} misaligned. Don't use these points for processing if a mistake was made while measuring them. Or, if the control points are correct, processing should fix the problem.",
+          "agency": "{count} {count, plural, one {Kontrollpunkt ist} other {Kontrollpunkte sind}} falsch ausgerichtet. Verwenden Sie diese Punkte nicht für die Verarbeitung, wenn sie fehlerhaft eingemessen wurden. Wenn die Kontrollpunkte dennoch korrekt sind, sollte die Verarbeitung das Problem beheben.",
+          "ai": "{count} {count, plural, one {Kontrollpunkt ist} other {Kontrollpunkte sind}} fehlausgerichtet. Verwenden Sie diese Punkte nicht für die Verarbeitung, wenn bei der Messung ein Fehler gemacht wurde. Oder, wenn die Kontrollpunkte korrekt sind, sollte die Verarbeitung das Problem beheben."
+        },
+        {
+          "id": "de-018",
+          "source": "{count, plural, one {Dataset} other {Datasets}} in the processing task will be canceled and this cannot be undone.",
+          "agency": "{count, plural, one {Datensatz in der Verarbeitungsaufgabe wird} other {Datensätze in der Verarbeitungsaufgabe werden}} abgebrochen. Dieser Vorgang kann nicht rückgängig gemacht werden.",
+          "ai": "{count, plural, one {Der Datensatz} other {Die Datensätze}} in der Verarbeitungsaufgabe {count, plural, one {wird} other {werden}} abgebrochen und dies kann nicht rückgängig gemacht werden."
+        },
+        {
+          "id": "de-019",
+          "source": "Version {required} or higher is required to enable Cross-dataset alignment.",
+          "agency": "Um den Datensatz-Abgleich zu aktivieren, ist Version {required} oder höher erforderlich.",
+          "ai": "Version {required} oder höher ist erforderlich, um die datensatzübergreifende Ausrichtung zu aktivieren."
+        },
+        {
+          "id": "de-020",
+          "source": "Automatically generates a realistic, high-detail 3D scene for datasets captured with GS mode",
+          "agency": "Generiert automatisch eine realistische, detailreiche 3D-Szene für Datensätze, die im GS-Modus erfasst wurden",
+          "ai": "Erzeugt automatisch eine realistische, hochdetaillierte 3D-Szene für Datensätze, die im GS-Modus erfasst wurden"
+        },
+        {
+          "id": "de-021",
+          "source": "It looks like the wrong unit may be being used for the control point measurements. It is also possible there was a tracking mistake in SLAM. Are you sure the surveyed control points were given in meters? The measured unit scale was: {measuredScale} m",
+          "agency": "Es sieht so aus, als würde die falsche Einheit für Messungen der Kontrollpunkte verwendet. Es ist auch möglich, dass in SLAM ein Tracking-Fehler aufgetreten ist. Sind Sie sicher, dass die vermessenen Kontrollpunkte in Metern angegeben wurden? Die Messskala der Einheit war: {measuredScale} m",
+          "ai": "Es sieht so aus, als ob möglicherweise die falsche Einheit für die Kontrollpunktmessungen verwendet wird. Es ist auch möglich, dass ein Tracking-Fehler in SLAM aufgetreten ist. Sind Sie sicher, dass die vermessenen Kontrollpunkte in Metern angegeben wurden? Der gemessene Einheitenmaßstab war: {measuredScale} m"
+        },
+        {
+          "id": "de-022",
+          "source": "Blurring Units Consumed",
+          "agency": "Verbrauchte Unkenntlich machen-Units",
+          "ai": "Verbrauchte Unschärfe-Einheiten"
+        },
+        {
+          "id": "de-023",
+          "source": "At least two unique control points (with distinct IDs) are required for recording but you are only using 1. This dataset cannot be processed with control points since there are not enough control points to register it. You can still process the dataset without control points.",
+          "agency": "Für die Aufzeichnung sind mindestens zwei eindeutige Kontrollpunkte (mit unterschiedlichen IDs) erforderlich, aber Sie verwenden nur einen. Dieser Datensatz kann nicht mit Kontrollpunkten verarbeitet werden, da nicht genügend Kontrollpunkte für die Registrierung verfügbar sind. Sie können den Datensatz aber auch ohne Kontrollpunkte verarbeiten.",
+          "ai": "Für die Aufzeichnung sind mindestens zwei eindeutige Kontrollpunkte (mit unterschiedlichen IDs) erforderlich, aber Sie verwenden nur 1. Dieser Datensatz kann nicht mit Kontrollpunkten verarbeitet werden, da nicht genügend Kontrollpunkte für die Registrierung vorhanden sind. Sie können den Datensatz trotzdem ohne Kontrollpunkte verarbeiten."
+        },
+        {
+          "id": "de-024",
+          "source": "The mean control point deviation decreased from {originMeanError} to {flippedMeanError} when flipping the x and y coordinates of the surveyed control points. This likely means the surveyed control points were given in a left handed coordinate system. However the control points must be given in a right handed coordinate system.",
+          "agency": "Die mittlere Kontrollpunkt-Abweichung hat sich von {originMeanError} auf {flippedMeanError} verringert, als die x- und y-Koordinaten der gemessenen Kontrollpunkte vertauscht wurden. Das bedeutet wahrscheinlich, dass die gemessenen Kontrollpunkte in einem linkshändigen Koordinatensystem angegeben wurden. Die Kontrollpunkte müssen aber in einem rechtshändigen Koordinatensystem angegeben werden.",
+          "ai": "Die mittlere Kontrollpunktabweichung verringerte sich von {originMeanError} auf {flippedMeanError}, wenn die x- und y-Koordinaten der vermessenen Kontrollpunkte vertauscht wurden. Dies bedeutet wahrscheinlich, dass die vermessenen Kontrollpunkte in einem linkshändigen Koordinatensystem angegeben wurden. Die Kontrollpunkte müssen jedoch in einem rechtshändigen Koordinatensystem angegeben werden."
+        },
+        {
+          "id": "de-025",
+          "source": "Cross-dataset alignment requires at least 2 datasets to be selected for processing.",
+          "agency": "Um Datensätze abzugleichen, müssen mindestens 2 Datensätze zur Verarbeitung ausgewählt werden.",
+          "ai": "Die datensatzübergreifende Ausrichtung erfordert, dass mindestens 2 Datensätze für die Verarbeitung ausgewählt werden."
+        }
+      ]
+    }
+  ]
+}

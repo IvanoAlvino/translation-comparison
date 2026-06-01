@@ -1,0 +1,33 @@
+<div class="page">
+  @if (current(); as c) {
+    <div class="topbar">
+      <span class="muted">{{ session.language()?.name }} · {{ session.participant() }}</span>
+      <span class="muted">{{ position() }} / {{ session.total() }}</span>
+    </div>
+    <div class="progress">
+      <div class="progress-fill" [style.width.%]="progress()"></div>
+    </div>
+
+    <div class="card source">
+      <h2>English source</h2>
+      <p class="source-text">{{ c.item.source }}</p>
+    </div>
+
+    <p class="prompt">Which translation do you prefer?</p>
+
+    <div class="grid">
+      <button class="option" (click)="choose('left')">
+        <span class="badge">A</span>
+        <span class="option-text">{{ leftText() }}</span>
+      </button>
+      <button class="option" (click)="choose('right')">
+        <span class="badge">B</span>
+        <span class="option-text">{{ rightText() }}</span>
+      </button>
+    </div>
+
+    <div class="tie">
+      <button class="ghost" (click)="choose('both')">Both are good</button>
+    </div>
+  }
+</div>

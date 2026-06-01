@@ -1,0 +1,102 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.progress {
+  height: 6px;
+  background: var(--line);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.2s ease;
+}
+
+.source {
+  margin-bottom: 20px;
+}
+
+.source-text {
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.prompt {
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.option {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 160px;
+  transition:
+    border-color 0.15s ease,
+    transform 0.05s ease;
+}
+
+.option:hover {
+  border-color: var(--accent);
+}
+
+.option:active {
+  transform: scale(0.995);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 99px;
+  background: var(--bg);
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.option-text {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+.tie {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.tie button {
+  min-width: 200px;
+}

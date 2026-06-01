@@ -1,0 +1,30 @@
+<div class="page">
+  <div class="card">
+    <h1>Translation comparison</h1>
+    <p class="lead">
+      You'll be shown an English text and two translations side by side. Pick the one you find
+      better. There are no right or wrong answers — go with your preference.
+    </p>
+
+    @if (loading()) {
+      <p class="muted">Loading…</p>
+    } @else if (error()) {
+      <p class="error">{{ error() }}</p>
+    } @else {
+      <label for="name">Your name</label>
+      <input id="name" type="text" [(ngModel)]="name" placeholder="e.g. Jane Doe" autocomplete="off" />
+
+      <label for="language">Language</label>
+      <select id="language" [(ngModel)]="languageCode">
+        <option value="" disabled>Select a language…</option>
+        @for (lang of session.languages(); track lang.code) {
+          <option [value]="lang.code">{{ lang.name }} ({{ lang.items.length }} texts)</option>
+        }
+      </select>
+
+      <div class="actions">
+        <button class="primary" [disabled]="!canStart" (click)="start()">Start</button>
+      </div>
+    }
+  </div>
+</div>
