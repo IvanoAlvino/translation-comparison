@@ -1,6 +1,6 @@
 <div class="page">
   <div class="card">
-    <h1>Admin · results aggregator</h1>
+    <h1>Results dashboard</h1>
     <p class="lead">
       Upload one or more participant result files. Everything is processed locally in your browser
       — nothing is uploaded anywhere.
@@ -12,7 +12,8 @@
         <input type="file" accept="application/json,.json" multiple (change)="onFiles($event)" />
       </label>
       @if (runCount()) {
-        <button class="ghost" (click)="clear()">Clear ({{ runCount() }})</button>
+        <span class="muted runcount">{{ runCount() }} run(s) loaded</span>
+        <button class="ghost" (click)="clear()">Clear</button>
       }
     </div>
 
@@ -22,87 +23,127 @@
   </div>
 
   @if (runCount()) {
-    <div class="card section">
-      <h2>Overall — {{ runCount() }} run(s)</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Comparisons</th>
-            <th>AI preferred</th>
-            <th>Agency preferred</th>
-            <th>Both good</th>
-            <th>AI win rate*</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{ overall().total }}</td>
-            <td>{{ overall().ai }}</td>
-            <td>{{ overall().agency }}</td>
-            <td>{{ overall().tie }}</td>
-            <td><strong>{{ aiWinRate(overall()) }}</strong></td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- Headline KPI -->
+    <div class="card hero">
+      <div class="hero-head">
+        <span class="hero-label">AI win rate</span>
+        <span class="hero-value" [class]="winClass(overall())">{{ aiWinRate(overall()) }}</span>
+        <span class="hero-sub muted">
+          {{ overall().total }} comparisons · {{ runCount() }} run(s)
+        </span>
+      </div>
+
+      <div class="bar">
+        <div class="bar-ai" [style.width.%]="aiWinNum(overall())">
+          @if (aiWinNum(overall()) >= 16) {
+            <span>{{ overall().ai + overall().tie }}</span>
+          }
+        </div>
+        <div class="bar-agency">
+          @if (100 - aiWinNum(overall()) >= 16) {
+            <span>{{ overall().agency }}</span>
+          }
+        </div>
+      </div>
+      <div class="legend">
+        <span><i class="dot ai"></i> AI preferred + both good</span>
+        <span><i class="dot agency"></i> Agency preferred</span>
+      </div>
+
+      <div class="tiles">
+        <div class="tile">
+          <div class="tile-num">{{ overall().total }}</div>
+          <div class="tile-label">Comparisons</div>
+        </div>
+        <div class="tile">
+          <div class="tile-num ai-ink">{{ overall().ai }}</div>
+          <div class="tile-label">AI preferred</div>
+        </div>
+        <div class="tile">
+          <div class="tile-num agency-ink">{{ overall().agency }}</div>
+          <div class="tile-label">Agency preferred</div>
+        </div>
+        <div class="tile">
+          <div class="tile-num">{{ overall().tie }}</div>
+          <div class="tile-label">Both good</div>
+        </div>
+      </div>
+
       <p class="footnote muted">
-        * AI win rate is (AI + Both good) ÷ all comparisons — a tie counts as an AI win.
+        AI win rate is (AI preferred + both good) ÷ all comparisons — a tie counts as an AI win.
       </p>
     </div>
 
+    <!-- By language -->
     <div class="card section">
       <h2>By language</h2>
-      <table>
+      <table class="stats-table">
         <thead>
           <tr>
             <th>Language</th>
-            <th>Comparisons</th>
-            <th>AI</th>
-            <th>Agency</th>
-            <th>Both good</th>
-            <th>AI win rate*</th>
+            <th class="num">Comparisons</th>
+            <th class="num">AI</th>
+            <th class="num">Agency</th>
+            <th class="num">Both good</th>
+            <th class="rate-col">AI win rate</th>
           </tr>
         </thead>
         <tbody>
           @for (row of byLanguage(); track row.key) {
             <tr>
-              <td>{{ row.key }}</td>
-              <td>{{ row.total }}</td>
-              <td>{{ row.ai }}</td>
-              <td>{{ row.agency }}</td>
-              <td>{{ row.tie }}</td>
-              <td><strong>{{ aiWinRate(row) }}</strong></td>
+              <td class="key">{{ row.key }}</td>
+              <td class="num">{{ row.total }}</td>
+              <td class="num ai-ink">{{ row.ai }}</td>
+              <td class="num agency-ink">{{ row.agency }}</td>
+              <td class="num">{{ row.tie }}</td>
+              <td class="rate-col">
+                <div class="rate">
+                  <div class="minibar"><div class="minibar-fill" [class]="winClass(row)" [style.width.%]="aiWinNum(row)"></div></div>
+                  <strong [class]="winClass(row)">{{ aiWinRate(row) }}</strong>
+                </div>
+              </td>
             </tr>
           }
         </tbody>
       </table>
     </div>
 
+    <!-- By participant -->
     <div class="card section">
       <h2>By participant</h2>
-      <table>
+      <table class="stats-table">
         <thead>
           <tr>
             <th>Participant</th>
-            <th>Comparisons</th>
-            <th>AI</th>
-            <th>Agency</th>
-            <th>Both good</th>
-            <th>AI win rate*</th>
+            <th class="num">Comparisons</th>
+            <th class="num">AI</th>
+            <th class="num">Agency</th>
+            <th class="num">Both good</th>
+            <th class="rate-col">AI win rate</th>
           </tr>
         </thead>
         <tbody>
           @for (row of byParticipant(); track row.key) {
             <tr>
-              <td>{{ row.key }}</td>
-              <td>{{ row.total }}</td>
-              <td>{{ row.ai }}</td>
-              <td>{{ row.agency }}</td>
-              <td>{{ row.tie }}</td>
-              <td><strong>{{ aiWinRate(row) }}</strong></td>
+              <td class="key">{{ row.key }}</td>
+              <td class="num">{{ row.total }}</td>
+              <td class="num ai-ink">{{ row.ai }}</td>
+              <td class="num agency-ink">{{ row.agency }}</td>
+              <td class="num">{{ row.tie }}</td>
+              <td class="rate-col">
+                <div class="rate">
+                  <div class="minibar"><div class="minibar-fill" [class]="winClass(row)" [style.width.%]="aiWinNum(row)"></div></div>
+                  <strong [class]="winClass(row)">{{ aiWinRate(row) }}</strong>
+                </div>
+              </td>
             </tr>
           }
         </tbody>
       </table>
+    </div>
+  } @else {
+    <div class="card empty">
+      <p class="muted">No results loaded yet. Select participant result files above to see the breakdown.</p>
     </div>
   }
 </div>

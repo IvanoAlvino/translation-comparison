@@ -78,6 +78,20 @@ export class Admin {
     return this.pct(t.ai + t.tie, t.total);
   }
 
+  /** AI win rate as a number 0–100, for bar widths. */
+  aiWinNum(t: Tally): number {
+    return t.total ? Math.round(((t.ai + t.tie) / t.total) * 100) : 0;
+  }
+
+  /** Color band for a win rate: good / mid / bad. */
+  winClass(t: Tally): string {
+    if (!t.total) return '';
+    const p = this.aiWinNum(t);
+    if (p >= 55) return 'good';
+    if (p <= 45) return 'bad';
+    return 'mid';
+  }
+
   private group(keyFn: (r: ResultFile) => string): Tally[] {
     const map = new Map<string, ResultFile[]>();
     for (const r of this.results()) {
