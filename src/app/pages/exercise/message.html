@@ -1,0 +1,12 @@
+@if (rendered().hasPlural) {
+  <div class="variants">
+    @for (line of rendered().lines; track line.key) {
+      <div class="variant">
+        <span class="vkey">{{ line.key }}</span>
+        <span class="vtext">@for (n of line.nodes; track $index) {<span [class.chip]="n.chip">{{ n.value }}</span>}</span>
+      </div>
+    }
+  </div>
+} @else {
+  <span class="flat">@for (n of rendered().lines[0].nodes; track $index) {<span [class.chip]="n.chip">{{ n.value }}</span>}</span>
+}

@@ -24,6 +24,7 @@
 }
 
 .source-text {
+  display: block;
   font-size: 17px;
   line-height: 1.5;
   margin: 0;
@@ -85,10 +86,46 @@
 }
 
 .option-text {
+  display: block;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
   color: var(--ink);
+}
+
+/* Legend explaining chips / plural variant lines (uses local copies of the chip styles
+   since the originals are scoped to the message component). */
+.legend {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: -8px 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.legend .chip {
+  display: inline-block;
+  background: #eef2ff;
+  color: #3a4fd6;
+  border: 1px solid #d4ddff;
+  border-radius: 6px;
+  padding: 0 6px;
+  font-size: 0.86em;
+  font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.legend .vkey {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: #f1f3f7;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 0 7px;
 }
 
 .tie {

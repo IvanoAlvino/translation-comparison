@@ -10,19 +10,30 @@
 
     <div class="card source">
       <h2>English source</h2>
-      <p class="source-text">{{ c.item.source }}</p>
+      <app-message class="source-text" [text]="c.item.source" />
     </div>
+
+    @if (hints().chip || hints().plural) {
+      <p class="legend muted">
+        @if (hints().chip) {
+          <span><span class="chip">example</span> is a placeholder the app fills in automatically — judge the surrounding wording.</span>
+        }
+        @if (hints().plural) {
+          <span>The <span class="vkey">one</span>/<span class="vkey">other</span> lines show how each version reads for the singular and plural cases.</span>
+        }
+      </p>
+    }
 
     <p class="prompt">Which translation do you prefer?</p>
 
     <div class="grid">
       <button class="option" (click)="choose('left')">
         <span class="badge">A</span>
-        <span class="option-text">{{ leftText() }}</span>
+        <app-message class="option-text" [text]="leftText()" />
       </button>
       <button class="option" (click)="choose('right')">
         <span class="badge">B</span>
-        <span class="option-text">{{ rightText() }}</span>
+        <app-message class="option-text" [text]="rightText()" />
       </button>
     </div>
 

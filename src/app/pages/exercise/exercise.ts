@@ -1,10 +1,12 @@
 import { Component, OnInit, computed, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { renderMessage } from '../../icu';
 import { SessionService } from '../../session.service';
+import { Message } from './message';
 
 @Component({
   selector: 'app-exercise',
-  imports: [],
+  imports: [Message],
   templateUrl: './exercise.html',
   styleUrl: './exercise.css',
 })
@@ -30,6 +32,17 @@ export class Exercise implements OnInit {
   readonly progress = computed(() =>
     this.session.total() ? (this.session.index() / this.session.total()) * 100 : 0,
   );
+
+  /** Whether the current item uses placeholders / plural forms, to show the right hints. */
+  readonly hints = computed(() => {
+    const c = this.current();
+    if (!c) return { chip: false, plural: false };
+    const r = renderMessage(c.item.source);
+    return {
+      chip: r.lines.some((l) => l.nodes.some((n) => n.chip)),
+      plural: r.hasPlural,
+    };
+  });
 
   ngOnInit(): void {
     if (!this.session.hasSession()) {
