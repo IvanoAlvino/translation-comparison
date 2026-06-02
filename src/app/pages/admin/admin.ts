@@ -1,5 +1,6 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component, OnInit, computed, inject, signal } from '@angular/core';
 import { ResultFile } from '../../models';
+import { SessionService } from '../../session.service';
 
 interface Tally {
   key: string;
@@ -9,13 +10,29 @@ interface Tally {
   tie: number;
 }
 
+/** Per-item breakdown, joined with the source/agency/AI text from translations.json. */
+interface ItemStat {
+  id: string;
+  languageName: string;
+  source: string;
+  agency: string;
+  ai: string;
+  known: boolean;
+  total: number;
+  agencyPicks: number;
+  aiPicks: number;
+  ties: number;
+}
+
 @Component({
   selector: 'app-admin',
   imports: [],
   templateUrl: './admin.html',
   styleUrl: './admin.css',
 })
-export class Admin {
+export class Admin implements OnInit {
+  private readonly session = inject(SessionService);
+
   readonly results = signal<ResultFile[]>([]);
   readonly errors = signal<string[]>([]);
 
@@ -30,6 +47,61 @@ export class Admin {
   readonly byParticipant = computed<Tally[]>(() =>
     this.group((r) => r.participant || 'Unknown'),
   );
+
+  /** itemId → its text, from the bundled translation file. */
+  private readonly itemIndex = computed(() => {
+    const map = new Map<string, { languageName: string; source: string; agency: string; ai: string }>();
+    for (const lang of this.session.languages()) {
+      for (const it of lang.items) {
+        map.set(it.id, { languageName: lang.name, source: it.source, agency: it.agency, ai: it.ai });
+      }
+    }
+    return map;
+  });
+
+  /** Items most often chosen as agency-best — i.e. where the AI is currently weakest. */
+  readonly agencyFavored = computed<ItemStat[]>(() => {
+    const counts = new Map<string, { agency: number; ai: number; tie: number }>();
+    for (const run of this.results()) {
+      for (const c of run.choices) {
+        const e = counts.get(c.itemId) ?? { agency: 0, ai: 0, tie: 0 };
+        if (c.chosen === 'agency') e.agency++;
+        else if (c.chosen === 'ai') e.ai++;
+        else e.tie++;
+        counts.set(c.itemId, e);
+      }
+    }
+
+    const idx = this.itemIndex();
+    const stats: ItemStat[] = [];
+    for (const [id, e] of counts) {
+      if (e.agency === 0) continue; // only items reviewers actually preferred as agency
+      const meta = idx.get(id);
+      stats.push({
+        id,
+        languageName: meta?.languageName ?? id.split('-')[0],
+        source: meta?.source ?? '',
+        agency: meta?.agency ?? '',
+        ai: meta?.ai ?? '',
+        known: !!meta,
+        total: e.agency + e.ai + e.tie,
+        agencyPicks: e.agency,
+        aiPicks: e.ai,
+        ties: e.tie,
+      });
+    }
+    // Most agency picks first; break ties by agency share of that item's votes.
+    stats.sort(
+      (a, b) =>
+        b.agencyPicks - a.agencyPicks || b.agencyPicks / b.total - a.agencyPicks / a.total,
+    );
+    return stats.slice(0, 15);
+  });
+
+  ngOnInit(): void {
+    // Load translations so we can show the actual strings behind each itemId.
+    void this.session.load().catch(() => undefined);
+  }
 
   async onFiles(event: Event): Promise<void> {
     const input = event.target as HTMLInputElement;

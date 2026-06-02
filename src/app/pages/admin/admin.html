@@ -141,6 +141,49 @@
         </tbody>
       </table>
     </div>
+
+    <!-- AI's weakest strings: most often picked as agency-best -->
+    <div class="card section">
+      <h2>Where the agency won most</h2>
+      <p class="muted small">
+        The strings most frequently chosen as agency-best — i.e. where Claude is currently weakest.
+        Use these to refine <code>TRANSLATION_GUIDE.md</code>.
+      </p>
+      @if (agencyFavored().length) {
+        @for (it of agencyFavored(); track it.id) {
+          <div class="weak-item">
+            <div class="weak-head">
+              <span class="lang-chip">{{ it.languageName }} · {{ it.id }}</span>
+              <span class="weak-score">
+                <strong>{{ pct(it.agencyPicks, it.total) }} agency</strong>
+                <span class="muted">
+                  (agency {{ it.agencyPicks }} · AI {{ it.aiPicks }}@if (it.ties) { · tie {{ it.ties }}})
+                </span>
+              </span>
+            </div>
+            @if (it.known) {
+              <div class="weak-source">{{ it.source }}</div>
+              <div class="weak-cols">
+                <div class="weak-col agency-side">
+                  <div class="wlabel">Agency · chosen {{ it.agencyPicks }}×</div>
+                  <div class="wtext">{{ it.agency }}</div>
+                </div>
+                <div class="weak-col ai-side">
+                  <div class="wlabel">AI · chosen {{ it.aiPicks }}×</div>
+                  <div class="wtext">{{ it.ai }}</div>
+                </div>
+              </div>
+            } @else {
+              <div class="weak-source muted">
+                (this item id isn't in the current translation file — text unavailable)
+              </div>
+            }
+          </div>
+        }
+      } @else {
+        <p class="muted">No string has been preferred as agency-best yet.</p>
+      }
+    </div>
   } @else {
     <div class="card empty">
       <p class="muted">No results loaded yet. Select participant result files above to see the breakdown.</p>

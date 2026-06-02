@@ -266,3 +266,86 @@
 .minibar-fill.bad {
   background: var(--bad);
 }
+
+/* ---------- Agency-favored strings ---------- */
+.small {
+  font-size: 13px;
+  margin-top: 0;
+}
+
+.weak-item {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-top: 12px;
+}
+
+.weak-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.lang-chip {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: 2px 10px;
+}
+
+.weak-score {
+  font-size: 13px;
+}
+
+.weak-source {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.weak-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .weak-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.weak-col {
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.agency-side {
+  background: var(--good-soft);
+  border: 1px solid #c9ead8;
+}
+
+.ai-side {
+  background: var(--ai-soft);
+  border: 1px solid #d4ddff;
+}
+
+.wlabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.wtext {
+  font-size: 14px;
+  line-height: 1.5;
+}
