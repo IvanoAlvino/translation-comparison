@@ -131,6 +131,14 @@ export class Admin implements OnInit {
     this.agencyLang.set((event.target as HTMLSelectElement).value);
   }
 
+  /** Severity band for an item's agency win-share: red ≥70%, amber 50–69%, grey <50%. */
+  severityClass(it: ItemStat): string {
+    const share = it.total ? it.agencyPicks / it.total : 0;
+    if (share >= 0.7) return 'sev-red';
+    if (share >= 0.5) return 'sev-amber';
+    return 'sev-grey';
+  }
+
   ngOnInit(): void {
     // Load translations so we can show the actual strings behind each itemId.
     void this.session.load().catch(() => undefined);

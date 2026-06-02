@@ -164,11 +164,12 @@
 
       @if (agencyFavored().length) {
         @for (it of agencyFavored(); track it.id) {
-          <div class="weak-item">
+          <div [class]="'weak-item ' + severityClass(it)">
             <div class="weak-head">
               <span class="lang-chip">{{ it.languageName }} · {{ it.id }}</span>
               <span class="weak-score">
                 <strong>{{ pct(it.agencyPicks, it.total) }} agency</strong>
+                <span class="muted">· n={{ it.total }}</span>
                 <span class="muted">
                   (agency {{ it.agencyPicks }} · AI {{ it.aiPicks }}@if (it.ties) { · tie {{ it.ties }}})
                 </span>

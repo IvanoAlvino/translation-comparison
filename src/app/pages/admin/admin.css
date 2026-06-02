@@ -292,9 +292,21 @@
 
 .weak-item {
   border: 1px solid var(--line);
+  border-left: 5px solid var(--agency);
   border-radius: 10px;
   padding: 14px 16px;
   margin-top: 12px;
+}
+
+/* Severity stripe by agency win-share: red ≥70%, amber 50–69%, grey <50%. */
+.weak-item.sev-red {
+  border-left-color: var(--bad);
+}
+.weak-item.sev-amber {
+  border-left-color: #d99000;
+}
+.weak-item.sev-grey {
+  border-left-color: var(--agency);
 }
 
 .weak-head {
