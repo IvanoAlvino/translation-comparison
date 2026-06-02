@@ -273,6 +273,23 @@
   margin-top: 0;
 }
 
+.section-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 8px;
+}
+
+.section-controls label {
+  margin: 0;
+  font-size: 13px;
+}
+
+.section-controls select {
+  width: auto;
+  max-width: 260px;
+}
+
 .weak-item {
   border: 1px solid var(--line);
   border-radius: 10px;

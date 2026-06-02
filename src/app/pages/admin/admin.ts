@@ -13,6 +13,7 @@ interface Tally {
 /** Per-item breakdown, joined with the source/agency/AI text from translations.json. */
 interface ItemStat {
   id: string;
+  code: string;
   languageName: string;
   source: string;
   agency: string;
@@ -48,12 +49,35 @@ export class Admin implements OnInit {
     this.group((r) => r.participant || 'Unknown'),
   );
 
+  /** Language filter for the agency-favored section. '' = all languages. */
+  readonly agencyLang = signal<string>('');
+
+  /** Languages present in the uploaded results, for the section's filter dropdown. */
+  readonly resultLanguages = computed<{ code: string; name: string }[]>(() => {
+    const map = new Map<string, string>();
+    for (const r of this.results()) {
+      if (r.language) map.set(r.language, r.languageName || r.language);
+    }
+    return [...map.entries()]
+      .map(([code, name]) => ({ code, name }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  });
+
   /** itemId → its text, from the bundled translation file. */
   private readonly itemIndex = computed(() => {
-    const map = new Map<string, { languageName: string; source: string; agency: string; ai: string }>();
+    const map = new Map<
+      string,
+      { code: string; languageName: string; source: string; agency: string; ai: string }
+    >();
     for (const lang of this.session.languages()) {
       for (const it of lang.items) {
-        map.set(it.id, { languageName: lang.name, source: it.source, agency: it.agency, ai: it.ai });
+        map.set(it.id, {
+          code: lang.code,
+          languageName: lang.name,
+          source: it.source,
+          agency: it.agency,
+          ai: it.ai,
+        });
       }
     }
     return map;
@@ -73,13 +97,17 @@ export class Admin implements OnInit {
     }
 
     const idx = this.itemIndex();
+    const lang = this.agencyLang();
     const stats: ItemStat[] = [];
     for (const [id, e] of counts) {
       if (e.agency === 0) continue; // only items reviewers actually preferred as agency
       const meta = idx.get(id);
+      const code = meta?.code ?? id.split('-')[0];
+      if (lang && code !== lang) continue; // section-scoped language filter
       stats.push({
         id,
-        languageName: meta?.languageName ?? id.split('-')[0],
+        code,
+        languageName: meta?.languageName ?? code,
         source: meta?.source ?? '',
         agency: meta?.agency ?? '',
         ai: meta?.ai ?? '',
@@ -95,8 +123,13 @@ export class Admin implements OnInit {
       (a, b) =>
         b.agencyPicks - a.agencyPicks || b.agencyPicks / b.total - a.agencyPicks / a.total,
     );
-    return stats.slice(0, 15);
+    // Show the full ranked list when focused on one language; cap the combined view.
+    return lang ? stats : stats.slice(0, 15);
   });
+
+  filterLang(event: Event): void {
+    this.agencyLang.set((event.target as HTMLSelectElement).value);
+  }
 
   ngOnInit(): void {
     // Load translations so we can show the actual strings behind each itemId.

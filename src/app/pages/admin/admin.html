@@ -149,6 +149,19 @@
         The strings most frequently chosen as agency-best — i.e. where Claude is currently weakest.
         Use these to refine <code>TRANSLATION_GUIDE.md</code>.
       </p>
+
+      @if (resultLanguages().length > 1) {
+        <div class="section-controls">
+          <label for="agency-lang">Language</label>
+          <select id="agency-lang" (change)="filterLang($event)">
+            <option value="">All languages (top 15)</option>
+            @for (l of resultLanguages(); track l.code) {
+              <option [value]="l.code">{{ l.name }}</option>
+            }
+          </select>
+        </div>
+      }
+
       @if (agencyFavored().length) {
         @for (it of agencyFavored(); track it.id) {
           <div class="weak-item">
@@ -181,7 +194,10 @@
           </div>
         }
       } @else {
-        <p class="muted">No string has been preferred as agency-best yet.</p>
+        <p class="muted">
+          No string was preferred as agency-best
+          {{ agencyLang() ? 'for this language' : '' }} yet.
+        </p>
       }
     </div>
   } @else {
